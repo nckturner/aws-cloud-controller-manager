@@ -1,0 +1,23 @@
+package: github.com/nckturner/aws-cloud-controller-manager
+import:
+- package: github.com/golang/glog
+- package: github.com/spf13/pflag
+- package: k8s.io/apiserver
+  subpackages:
+  - pkg/server/healthz
+  - pkg/util/flag
+  - pkg/util/logs
+  version: kubernetes-1.9.3
+- package: k8s.io/kubernetes
+  subpackages:
+  - cmd/cloud-controller-manager/app
+  - cmd/cloud-controller-manager/app/options
+  - pkg/client/metrics/prometheus
+  - pkg/cloudprovider
+  - pkg/version/prometheus
+  - pkg/version/verflag
+  version: v1.9.3
+- package: k8s.io/client-go
+  version: kubernetes-1.9.3
+- package: k8s.io/apiextensions-apiserver
+  version: kubernetes-1.9.3
